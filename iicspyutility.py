@@ -116,15 +116,14 @@ def main():
             f.write(getexportlog(sess, jobid))
     except Exception as e:
         raise
-    f.close()
 
     try:
         with open(exportzip,'wb+') as f:
             f.write(getpackage(sess, jobid))
     except Exception as e:
         raise
-    f.close()
-
+        
+        
 if __name__ == "__main__":
     main()
 
